@@ -1,15 +1,17 @@
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import HomeScreen from './src/screens/HomeScreen'
-import ComponentsScreen from './src/screens/ComponentsScreen'
+import HomeScreen from './screens/HomeScreen'
+import ComponentsScreen from './screens/ComponentsScreen'
+import FlatListScreen from './screens/FlatListScreen'
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Components: ComponentsScreen,
+    FlatList: FlatListScreen,
   },
   {
-    initialRouteName: 'Components',
+    initialRouteName: 'FlatList',
     defaultNavigationOptions: {
       title: 'App',
     },
