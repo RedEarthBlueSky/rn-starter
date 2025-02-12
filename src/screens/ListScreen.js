@@ -3,19 +3,24 @@ import React from 'react'
 import listData from '../data/listData'
 import { screenStyles } from '../styles/styles'
 
-const { screenTextStyle } = screenStyles
+const { screenTextStyle, listTextStyle, listViewStyle } = screenStyles
 
 const ListScreen = () => {
   return (
-    <View>
+    <View style={{paddingBottom: 100,}}>
       <Text style={screenTextStyle}>List Screen</Text>
       <FlatList 
+        horizontal={false}
+        showsHorizontalScrollIndicator={false}
         scrollEnabled={true} // lets scroll this bad boy
         data={listData}
         renderItem={({item, index}) => {
           //  destructure off the item property from parent element
           //  element === { item: {name: 'name' }, index: number - 1 }
-          return <Text key={index}>{index + 1}: {item.name}</Text>
+          return <View style={listViewStyle} key={index}>
+              <Text style={listTextStyle}>{index + 1}: {item.name}</Text>
+              <Text>Age:  {item.age}</Text>
+            </View>
         }}
       />
     </View>
