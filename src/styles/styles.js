@@ -15,6 +15,9 @@ const screenStyles = {
     paddingVertical: 8,
     width: 220,
   },
+  TOButtonText: {
+    fontSize: 14, fontWeight: 'bold', color: '#fff'
+  },
   buttonWrapper: {
     alignSelf: 'center', 
     marginTop: 15,

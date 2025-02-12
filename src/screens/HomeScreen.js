@@ -3,20 +3,32 @@ import { Text, View, Button, TouchableOpacity } from "react-native"
 import BasicButton from "../components/BasicButton"
 import { screenStyles } from "../styles/styles"
 
-const { screenTextStyle, TOButton } = screenStyles
+const { screenTextStyle, TOButton, TOButtonText } = screenStyles
 
-const HomeScreen = () => {
+//  props is being passed down from App.js - I would guess
+const HomeScreen = ({navigation}) => {
+  const { navigate } = navigation
   return <View>
     <Text style={screenTextStyle}>Socai Home Screen!</Text>
-    <BasicButton color='#e31cad'/>
+    <BasicButton navigate={navigate}/>
     <TouchableOpacity 
       style={TOButton}
       onPress={() => {
-        console.log('Go to List Demo')
+        navigate('List')
       }}
     >
-      <Text style={{fontSize: 14, fontWeight: 'bold', color: '#fff'}}>
+      <Text style={TOButtonText}>
         GO TO LIST DEMO
+      </Text>
+    </TouchableOpacity>
+    <TouchableOpacity 
+      style={TOButton}
+      onPress={() => {
+        navigate('Image')
+      }}
+    >
+      <Text style={TOButtonText}>
+        GO TO IMAGE SCREEN
       </Text>
     </TouchableOpacity>
   </View>

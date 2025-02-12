@@ -4,16 +4,16 @@ import { screenStyles } from "../styles/styles"
 
 const { buttonWrapper } = screenStyles
 
-const BasicButton = ({color}) => {
+const BasicButton = ({navigate}) => {
   return (
     <View>
         <View style={buttonWrapper}>
           <Button 
-            color={color}
+            color='#e31cad'
             disabled={false}
             title='Go to Components Demo' 
             onPress={() => {
-              console.log('Components Demo button pressed!')
+              navigate('Components')
             }}  
             accessibilityLabel="press to go to Components Demo Screen"
           />
