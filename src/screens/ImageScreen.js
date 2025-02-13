@@ -7,7 +7,7 @@ const { screenTextStyle } = screenStyles
 
 const ImageScreen = () => {
   return (
-    <View>
+    <View style={{padding: 20, paddingTop: 10}}>
       <Text style={screenTextStyle}>Image Screen</Text>
       <ImageDetail 
         title='Forest' 

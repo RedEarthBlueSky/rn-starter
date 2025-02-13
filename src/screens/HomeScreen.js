@@ -28,7 +28,17 @@ const HomeScreen = ({navigation}) => {
       }}
     >
       <Text style={TOButtonText}>
-        GO TO IMAGE SCREEN
+        GO TO IMAGE DEMO
+      </Text>
+    </TouchableOpacity>
+    <TouchableOpacity 
+      style={TOButton}
+      onPress={() => {
+        navigate('Counter')
+      }}
+    >
+      <Text style={TOButtonText}>
+        GO TO COUNTER DEMO
       </Text>
     </TouchableOpacity>
   </View>

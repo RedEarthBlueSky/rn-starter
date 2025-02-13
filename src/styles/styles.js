@@ -1,7 +1,6 @@
 //  Create style sheet as JS Object rather than use key word StyleSheet.create({})
-
 const parentStyles = {
-  textStyle: { fontSize: 30 },
+  textStyle: { fontSize: 36, fontWeight: 'bold', marginBottom: 10, },
 }
 
 const screenStyles = {
@@ -33,6 +32,17 @@ const screenStyles = {
   },
   listTextStyle: {
     fontSize: 24,
+  },
+  counterWrapper: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderColor: 'grey',
+    borderRadius: 5,
+    borderWidth: 0.5,
+    height: 80,
+    marginTop: 30,
+    paddingTop: 12,
+    width: 100,
   }
 }
 
