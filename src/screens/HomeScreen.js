@@ -51,6 +51,16 @@ const HomeScreen = ({navigation}) => {
         GO TO ADD COLOR DEMO
       </Text>
     </TouchableOpacity>
+    <TouchableOpacity 
+      style={TOButton}
+      onPress={() => {
+        navigate('Square')
+      }}
+    >
+      <Text style={TOButtonText}>
+        COLOR REDUCER DEMO
+      </Text>
+    </TouchableOpacity>
   </View>
 };
 
