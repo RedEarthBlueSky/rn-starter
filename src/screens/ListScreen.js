@@ -15,12 +15,14 @@ const ListScreen = () => {
         scrollEnabled={true} // lets scroll this bad boy
         data={listData}
         renderItem={({item, index}) => {
-          //  destructure off the item property from parent element
+          //  destructure off the item property from parent named element
           //  element === { item: {name: 'name' }, index: number - 1 }
-          return <View style={listViewStyle} key={index}>
+          return (
+            <View style={listViewStyle} key={index}>
               <Text style={listTextStyle}>{index + 1}: {item.name}</Text>
               <Text>Age:  {item.age}</Text>
             </View>
+          )
         }}
       />
     </View>

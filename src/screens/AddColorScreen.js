@@ -6,7 +6,8 @@ const { screenTextStyle, buttonWrapper, colorWrapper } = screenStyles
 
 const AddColorScreen = (props) => {
   // console.log(prettyFormat(props))
-  const [color, setColor] = useState([])
+  const [colorStr, setColorStr] = useState('')
+  const [colorArr, setColorArr] = useState([])
   return (
     <View>
        <Text style={screenTextStyle}>Add Color Demo</Text>
@@ -16,11 +17,8 @@ const AddColorScreen = (props) => {
               disabled={false}
               title='ADD A COLOR' 
               onPress={() => {
-                //  here we are creating an array of colors generated
-                //  but we can also use setColor(randomRGB())
-                //  and have color value initially and empty string
-                setColor([...color, randomRGB()])
-                console.log(prettyFormat(color))
+                setColorStr(randomRGB())
+                console.log(prettyFormat(colorStr))
               }}  
               accessibilityLabel="Add Color"
             />
@@ -29,16 +27,45 @@ const AddColorScreen = (props) => {
             <Button 
               color='#e31cad'
               disabled={false}
-              title='CLEAR COLOR ARRAY' 
+              title='CLEAR COLORS' 
               onPress={() => {
-                setColor([])
-                console.log(prettyFormat(color))
+                setColorStr('')
+                setColorArr([])
+              }}  
+              accessibilityLabel="Remove Color"
+            />
+        </View>
+        { colorStr === '' ? null :
+          <View style={[colorWrapper, {backgroundColor: colorStr}]} />
+        }
+        <Text style={screenTextStyle}>Create Color List</Text>
+        <View style={buttonWrapper}>
+            <Button 
+              color='#e31cad'
+              disabled={false}
+              title='ADD COLOR TO LIST' 
+              onPress={() => {
+                setColorArr([...colorArr, randomRGB()])
+                console.log(prettyFormat(colorArr))
               }}  
               accessibilityLabel="Add Color"
             />
         </View>
-        <View style={[colorWrapper, {backgroundColor: color[color.length - 1]}]}>
-        </View>
+        <FlatList 
+          data={colorArr}
+          horizontal={false}
+          keyExtractor={(item) => item}
+          scrollEnabled={true}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          renderItem={({item, index}) => {
+            return (
+              <View key={index} style={[colorWrapper, {backgroundColor: item}]}>
+            </View>
+            )
+          }}
+        />
+
     </View>
   )
 }
