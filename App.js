@@ -15,7 +15,7 @@ const navigator = createStackNavigator(
     Square: SquareSreen,
   },
   {
-    initialRouteName: "Square",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "App",
     },

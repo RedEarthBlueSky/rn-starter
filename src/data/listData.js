@@ -1,5 +1,3 @@
-//  can add the key as a key value pair 
-
 const listData = [
   {name: 'Badass Benny', age: 23,},
   {name: 'Mungo Michelle', age: 'grizzled'},
@@ -16,4 +14,13 @@ const listData = [
   {name: 'Scooby Don\'t', age: 'howling'},
 ]
 
-export default listData
+const homeListData = [
+  {target: 'Components', TITLE: 'TO COMPONENTS DEMO' },
+  {target: 'List', TITLE: 'TO LIST DEMO' },
+  {target: 'Image', TITLE: 'TO IMAGE DEMO' },
+  {target: 'Counter', TITLE: 'TO COUNTER DEMO' },
+  {target: 'AddColor', TITLE: 'TO ADD COLOR DEMO' },
+  {target: 'Square', TITLE: 'TO COLOR REDUCER DEMO' },
+]
+
+export {listData, homeListData}

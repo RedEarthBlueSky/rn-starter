@@ -1,6 +1,6 @@
 import { View, Text, FlatList } from 'react-native'
 import React from 'react'
-import listData from '../data/listData'
+import { listData } from '../data/listData'
 import { screenStyles } from '../styles/styles'
 
 const { screenTextStyle, listTextStyle, listViewStyle } = screenStyles
