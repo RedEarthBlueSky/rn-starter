@@ -1,7 +1,7 @@
 import { createAppContainer } from "react-navigation"
 import { createStackNavigator } from "react-navigation-stack"
 import { ComponentsScreen, HomeScreen, ListScreen, ImageScreen, CounterScreen,
-  AddColorScreen, SquareSreen
+  AddColorScreen, SquareScreen
  } from "./src/screens";
 
 const navigator = createStackNavigator(
@@ -12,10 +12,10 @@ const navigator = createStackNavigator(
     Counter: CounterScreen,
     Image: ImageScreen,
     List: ListScreen,
-    Square: SquareSreen,
+    Square: SquareScreen,
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "Square",
     defaultNavigationOptions: {
       title: "App",
     },

@@ -1,11 +1,9 @@
 import { View, Text, Button, FlatList } from 'react-native'
 import React, {useState} from 'react'
-import { format as prettyFormat} from 'pretty-format'
 import { screenStyles } from '../styles/styles'
 const { screenTextStyle, buttonWrapper, colorWrapper } = screenStyles
 
-const AddColorScreen = (props) => {
-  // console.log(prettyFormat(props))
+const AddColorScreen = () => {
   const [colorStr, setColorStr] = useState('')
   const [colorArr, setColorArr] = useState([])
   return (
@@ -14,24 +12,16 @@ const AddColorScreen = (props) => {
           <View style={buttonWrapper}>
             <Button 
               color='#e31cad'
-              disabled={false}
               title='ADD A COLOR' 
-              onPress={() => {
-                setColorStr(randomRGB())
-                console.log(prettyFormat(colorStr))
-              }}  
+              onPress={() => {setColorStr(randomRGB())}}  
               accessibilityLabel="Add Color"
             />
-        </View>
+          </View>
         <View style={buttonWrapper}>
             <Button 
               color='#e31cad'
-              disabled={false}
               title='CLEAR COLORS' 
-              onPress={() => {
-                setColorStr('')
-                setColorArr([])
-              }}  
+              onPress={() => {setColorStr('');setColorArr([])}}  
               accessibilityLabel="Remove Color"
             />
         </View>
@@ -42,19 +32,14 @@ const AddColorScreen = (props) => {
         <View style={buttonWrapper}>
             <Button 
               color='#e31cad'
-              disabled={false}
               title='ADD COLOR TO LIST' 
-              onPress={() => {
-                setColorArr([...colorArr, randomRGB()])
-                console.log(prettyFormat(colorArr))
-              }}  
+              onPress={() => {setColorArr([...colorArr, randomRGB()])}}  
               accessibilityLabel="Add Color"
             />
         </View>
         <FlatList 
           data={colorArr}
           horizontal={false}
-          keyExtractor={(item) => item}
           scrollEnabled={true}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}

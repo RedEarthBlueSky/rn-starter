@@ -12,23 +12,18 @@ const HomeScreen = ({navigation}) => {
   return <View>
     <Text style={screenTextStyle}>Socai Home Screen!</Text>
     <FlatList 
-      horizontal={false}
-      showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
       scrollEnabled
       data={homeListData}
-      renderItem={(element) => {
+      renderItem={({item, index}) => {
         const { navigate } = navigation
-        return (
-          <View> 
+        return <View key={index}> 
             <TOButtonType 
               navigate={navigate}
-              target={element.item.target}
-              title={element.item.TITLE}
+              target={item.target}
+              title={item.TITLE}
             />
           </View>
-        )
-        
       }}
     />
   </View>

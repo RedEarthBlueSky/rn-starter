@@ -7,16 +7,11 @@ const TOButtonType = ({navigate, target, title }) => {
   // console.log(navigation)
   return (
     <View>
-      <TouchableOpacity 
-            style={TOButton}
-            onPress={() => {
-              navigate(target)
-            }}
-          >
-            <Text style={TOButtonText}>
-              {title}
-            </Text>
-          </TouchableOpacity>
+      <TouchableOpacity style={TOButton} onPress={()=>{navigate(target)}}>
+        <Text style={TOButtonText}>
+          {title}
+        </Text>
+      </TouchableOpacity>
     </View>
   )
 }
