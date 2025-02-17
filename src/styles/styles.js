@@ -17,7 +17,8 @@ const screenStyles = {
   colorWrapper: {...parentStyles.boxWrapperOne,borderWidth: 0,alignSelf: 'left',
     marginLeft: 20,marginTop: 10,width: '73%'}, 
   SSTOButton: {...parentStyles.TOButton, marginTop: 5, },
-  ccTextStyle: {fontSize: 24, fontWeight: 'bold', marginTop: 10, marginBottom: 0,}
+  ccTextStyle: {fontSize: 24, fontWeight: 'bold', marginTop: 10, marginBottom: 0,},
+  colorBoxWrapper: {...parentStyles.boxWrapperOne, width:220}
 } // ****** END screenStyles ******
 
-export { screenStyles }
+export { screenStyles, parentStyles }
