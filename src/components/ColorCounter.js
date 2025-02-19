@@ -10,7 +10,8 @@ const ColorCounter = ({color, onIncrease, onDecrease}) => {
           <Text style={TOButtonText}> Increase {color} </Text>
         </TouchableOpacity>
         <TouchableOpacity style={SSTOButton} onPress={()=>{onDecrease()}}>
-          <Text style={TOButtonText}>Decrease {color}</Text>
+          <Text style={TOButtonText}>Decrease {color}
+</Text>
         </TouchableOpacity>
     </View>
 }
