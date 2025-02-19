@@ -16,11 +16,13 @@ const listData = [
 
 const homeListData = [
   {target: 'Components', TITLE: 'TO COMPONENTS DEMO' },
-  {target: 'List', TITLE: 'TO LIST DEMO' },
-  {target: 'Image', TITLE: 'TO IMAGE DEMO' },
-  {target: 'Counter', TITLE: 'TO COUNTER DEMO' },
-  {target: 'AddColor', TITLE: 'TO ADD COLOR DEMO' },
-  {target: 'Square', TITLE: 'TO COLOR REDUCER DEMO' },
+  {target: 'List', TITLE: 'LIST DEMO' },
+  {target: 'Image', TITLE: 'IMAGE DEMO' },
+  {target: 'Counter', TITLE: 'COUNTER DEMO' },
+  {target: 'AddColor', TITLE: 'ADD COLOR DEMO' },
+  {target: 'Square', TITLE: 'COLOR REDUCER DEMO' },
+  {target: 'EnterName', TITLE: 'ENTER NAME DEMO' },
+
 ]
 
 export {listData, homeListData}

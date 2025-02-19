@@ -1,10 +1,5 @@
-
-//  ****** START squareScreen Reducer ******
+//  **** START squareScreen Reducer ****
 const squareScreenReducer = (state, action) => {
-  //  state === {red: number, green: number, blue: number}
-  //  action === { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
-  //  further update
-  //  action === { type: 'change_red' || 'change_green' || 'change_blue', payload: 15 || -15 }
   switch (action.type) {
     case 'change_red' :
       return (state.red + action.payload > 255 || state.red + action.payload < 0)
@@ -18,6 +13,6 @@ const squareScreenReducer = (state, action) => {
     default :
       return state
   }
-} //  ****** END squareScreenReducer ******
+} //  **** END squareScreenReducer ****
 
 export { squareScreenReducer }

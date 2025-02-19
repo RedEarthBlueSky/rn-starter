@@ -8,7 +8,6 @@ const { screenTextStyle, TOButton, TOButtonText } = screenStyles
 
 //  props is being passed down from App.js - I would guess
 const HomeScreen = ({navigation}) => {
-
   return <View>
     <Text style={screenTextStyle}>Socai Home Screen!</Text>
     <FlatList 

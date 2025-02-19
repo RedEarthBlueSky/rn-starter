@@ -9,7 +9,7 @@ const COLOR_INCREMENT = 15
 
 const SquareScreen = () => {
   const [state, dispatch] = useReducer(squareScreenReducer, {red: 0, green: 0, blue: 0})
-  console.log('red:', state.red, 'green:', state.green, 'blue:', state.blue)
+  // console.log('red:', state.red, 'green:', state.green, 'blue:', state.blue)
   return (
     <View>
       <Text style={screenTextStyle}>Square Screen</Text>
