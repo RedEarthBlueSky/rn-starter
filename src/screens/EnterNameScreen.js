@@ -8,7 +8,6 @@ const EnterNameScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [seePassword, setSeePassword] = useState(true)
-  const [checkValidEmail, setCheckValidEmail] = useState(false)
   const [isFocused, setIsFocused] = useState(false)
   const onFocus = () => setIsFocused(true) 
 
